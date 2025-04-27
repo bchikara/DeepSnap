@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "Screenshot Solver",
+    "version": "1.0.0",
+    "description": "Capture and solve problems using DeepSeek API",
+    "icons": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    },
+    "background": {
+      "service_worker": "src/background/serviceWorker.ts"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["src/content/areaSelector.ts"]
+      }
+    ],
+    "commands": {
+      "capture-visible": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+1",
+          "mac": "Command+Shift+1"
+        },
+        "description": "Capture entire visible page"
+      },
+      "capture-selection": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+2",
+          "mac": "Command+Shift+2"
+        },
+        "description": "Select area to capture"
+      }
+    },
+    "permissions": [
+      "activeTab",
+      "storage",
+      "commands",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
