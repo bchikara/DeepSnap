@@ -73,10 +73,6 @@ We welcome contributions to make **DeepSnap** even better! Here's how you can ge
 4. Push to your branch (`git push origin feature-name`).
 5. Open a Pull Request.
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ---
 
 Happy coding and solving problems with **DeepSnap**! 🚀
